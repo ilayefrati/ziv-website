@@ -4,12 +4,13 @@
    background-image: url('/public/media/MainFirstPage.png');   
    background-position: center center;
    background-size: 100% 100%;  
-   padding: 40px 60px;
+   /* padding: 30px 60px; */
+   /* we dont need padding because its only for the navbar and it has space-around */
    display: flex;
    flex-direction: column;
    justify-content: flex-start;
    align-items: center;
-   gap: 100px 0px;
+   gap: 70px 0px;
 }
 
 .main-first-page-text{

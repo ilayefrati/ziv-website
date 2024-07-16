@@ -1,9 +1,11 @@
 import React from "react";
 import './MainFirstPage.css';
+import Navbar from "./Navbar";
 
 function MainFirstPage(){
     return(
         <div className="main-first-page">
+            <Navbar/>
             <div className="main-first-page-text">
                 <h1>זיו מערכות תוכנה</h1>
                 <h3>מערכת זיו מספקת פתרון מקיף לניהול צי הרכב ומאפשרת לחתוך בעלויות תפעול ולחסוך בהוצאות מיותרות. 
