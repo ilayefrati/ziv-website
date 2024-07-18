@@ -1,0 +1,56 @@
+.contact-us{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: fit-content;
+    background-color: #333;
+}
+
+.details{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    position: relative;
+    bottom: 0;
+    padding: 30px 10px;
+    gap: 20px 15px; /* i added gap so there will be always space horizontally and vertically */
+}
+
+.contact-us-line{
+    width: 80%;
+    margin: 0 0;
+}
+
+.credit{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    padding: 10px 0;
+    color: white;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+    /* הקלאס הזו מסתירה את הטקסט כדי שיהיה רק לאלה ששומעים את המסך */
+}
+
+.credit a{
+    font-size: 2rem;
+}
+
+.credit p{
+    color: white;
+}
