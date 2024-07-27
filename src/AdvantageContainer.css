@@ -1,0 +1,52 @@
+.advantage-container {
+    width: 400px;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px 0px;
+    padding: 15px 30px;
+    text-align: center;
+    background-color: #dfdcdc;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), /* Subtle shadow */
+                0 6px 20px rgba(0, 0, 0, 0.1); /* Larger, more diffuse shadow */
+    cursor: pointer;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.advantage-container i {
+    color: #d8a64e;
+}
+
+.advantage-container:hover {
+    background-color: #d8a64e;
+}
+
+.advantage-container:hover i {
+    color: white;
+}
+
+.advantage-container:hover p {
+    color: white;
+}
+
+.advantage-container h4 {
+    position: relative;
+    /* overflow: hidden; */
+    /* you dont need overflow: hidden because this isnt a button and you dont change its padding */
+    display: inline-block;
+}
+
+.advantage-container h4::after {
+    content: ' >';
+    position: absolute;
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    transform: translateX(-20px);
+}
+
+.advantage-container:hover h4::after {
+    opacity: 1;
+    transform: translateX(0);
+}
