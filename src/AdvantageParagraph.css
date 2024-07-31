@@ -1,0 +1,8 @@
+.advantage-paragraph{
+    display: flex;
+    flex-direction: column;
+    /* gap:10px 0px; */
+    text-align: right;
+    /* justify-content: flex-start; */
+    align-items: flex-end;
+}

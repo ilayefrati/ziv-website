@@ -21,7 +21,7 @@ function Navbar() {
       </li>
       <li>
         <Link to="/" className="nav-link-img">
-          <img src="./media/ZivLogo.png" />
+          <img src="/media/ZivLogo.png" />
         </Link>
       </li>
     </nav>

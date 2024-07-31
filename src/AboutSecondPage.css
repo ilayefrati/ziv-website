@@ -8,16 +8,16 @@
     justify-content: flex-start;
     align-items: center;
     gap: 60px 0px;
-    padding: 60px 60px;
+    padding: 60px;
 }
 
 .advantages{
     width: 100%;
     height: fit-content;
     display: flex;
-    flex-direction: row;
+    flex-direction: row-reverse;
     flex-wrap: wrap;
     gap: 50px;
     justify-content: center;
-    align-items: center;
+    align-items: stretch;
 }
