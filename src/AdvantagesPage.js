@@ -150,22 +150,16 @@ function AdvantagesPage() {
   const currentpage = pages[id] || { maintitle: "Page Not Found", content: [] };
 
   return (
-    <>
-      <div className="advantages-page">
-        <Navbar />
-        <h2>{currentpage.maintitle}</h2>
-        <div className="advantage-paragraph-container">
-          {currentpage.content.map((cont, index) => (
-            <AdvantageParagraph
-              key={index}
-              title={cont.title}
-              text={cont.text}
-            />
-          ))}
-        </div>
+    <div className="advantages-page">
+      <Navbar />
+      <h2>{currentpage.maintitle}</h2>
+      <div className="advantage-paragraph-container">
+        {currentpage.content.map((cont, index) => (
+          <AdvantageParagraph key={index} title={cont.title} text={cont.text} />
+        ))}
       </div>
       <ContactUs />
-    </>
+    </div>
   );
 }
 

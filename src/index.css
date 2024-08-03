@@ -77,6 +77,29 @@ a {
   /* so there will be no underline */
 }
 
+label{
+  font-size: 1.5rem;
+  font-family: 'Aharoni CLM', sans-serif;
+  color:#333;
+  direction: rtl;
+  white-space: nowrap;
+}
+
+select{
+  font-size: 1.5rem;
+  direction: rtl;
+  font-family: 'Aharoni CLM', sans-serif;
+  color:#333;
+}
+
+input{
+  direction: rtl;
+}
+
+textarea{
+  direction: rtl;
+}
+
 @media (min-width: 320px) and (max-width: 480px) {
 
   html {

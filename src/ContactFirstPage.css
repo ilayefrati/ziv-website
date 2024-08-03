@@ -1,0 +1,34 @@
+.contact-first-page{
+    min-height: 100vh;
+    height: fit-content;
+    width: 100vw;
+    /* padding: 0px 60px; */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 30px 0px;
+    padding: 0 60px;
+    background-color: #f4f4f4;
+}
+
+.contact-first-page-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap:70px 0px;
+    align-items: center;
+    padding: 70px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    width: fit-content;
+    height: fit-content;
+    background-color: #f4f4f4;
+}
+
+/* .contact-img{
+    width: 100%;
+    height: 500px;
+    position: absolute;
+    top: 0;
+    left: 0;
+} */

@@ -5,6 +5,7 @@ import Main from "./Main";
 import About from "./About";
 import AdvantagesPage from "./AdvantagesPage";
 import ScrollToTop from "./ScrollToTop";
+import Contact from "./Contact";
 
 function App() {
   return (
@@ -16,7 +17,7 @@ function App() {
         <Route path="/" element={<Main />}></Route>
         <Route path="/about" element={<About />}></Route>
         <Route path="/about/advantages/:id" element={<AdvantagesPage />} />
-        <Route path="/contact" element={<Main />}></Route>
+        <Route path="/contact" element={<Contact />}></Route>
       </Routes>
     </BrowserRouter>
   );
