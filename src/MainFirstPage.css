@@ -28,3 +28,10 @@
 .main-first-page-text h3 {
     font-family: 'Aharoni CLM', sans-serif;
 }
+
+@media (min-width: 481px) and (max-width: 768px) {
+    .main-first-page{
+        min-height: 100dvh;
+        background-size: cover;
+    }
+}

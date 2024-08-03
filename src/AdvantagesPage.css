@@ -13,6 +13,7 @@
 
 .advantages-page h2{
     align-self: center;
+    text-align: center;
 }
 
 .advantage-paragraph-container{
@@ -21,4 +22,10 @@
     gap:50px 0px;
     align-items: flex-end;
     margin-bottom: 60px;
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+    .advantages-page{
+        min-height: 100dvh;
+    }
 }

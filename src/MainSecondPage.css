@@ -15,3 +15,9 @@
 .video-container video{
     object-fit: fill;
 }
+
+@media (min-width: 481px) and (max-width: 768px) {
+    .main-second-page{
+        height: 100dvh;
+    }
+}

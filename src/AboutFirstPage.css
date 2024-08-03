@@ -27,3 +27,24 @@
 .about-first-page-text h3 {
     font-family: 'Aharoni CLM', sans-serif;
 }
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .about-first-page-text{
+        line-height: 1.5;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+    .about-first-page{
+        min-height: auto;
+        background-image: none;
+        background-color: #f4f4f4;
+        align-items: center;
+    }
+    
+    .about-first-page-text{
+        width: 100%;
+        text-align: center;
+        align-self: center;
+    }
+}

@@ -65,3 +65,9 @@
     height: auto;
     vertical-align: middle;
 }
+
+@media (min-width: 481px) and (max-width: 768px) {
+    .nav-link-img img{
+        width: 100px;
+    }
+}
