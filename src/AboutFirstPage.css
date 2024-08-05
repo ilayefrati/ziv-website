@@ -48,3 +48,19 @@
         align-self: center;
     }
 }
+
+@media (min-width: 320px) and (max-width: 480px) {
+    .about-first-page{
+        min-height: auto;
+        background-image: none;
+        background-color: #f4f4f4;
+        align-items: center;
+    }
+    
+    .about-first-page-text{
+        width: 100%;
+        text-align: center;
+        align-self: center;
+        margin-top: 60px; /* Add margin-top to move content down */
+    }
+}

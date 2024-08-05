@@ -35,3 +35,14 @@
         background-size: cover;
     }
 }
+
+@media (min-width: 320px) and (max-width: 480px) {
+    .main-first-page{
+        min-height: 100dvh;
+        background-size: cover;
+        padding: 0px 30px;
+    }
+    .main-first-page-text {
+        margin-top: 60px; /* Add margin-top to move content down */
+    }
+}

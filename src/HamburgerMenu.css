@@ -28,7 +28,7 @@
     position: absolute;
     height: 5px;
     width: 100%;
-    background: white;
+    background: #333;
     border-radius: 9px;
     opacity: 1;
     left: 0;
@@ -45,7 +45,9 @@
 
 }
 
-
+#hamburger_menu.click span{
+    background: white;
+}
 
 #hamburger_menu span:nth-child(1) {
     top: 0px;

@@ -1,11 +1,34 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./AdvantagesPage.css";
 import AdvantageParagraph from "./AdvantageParagraph";
 import { useParams } from "react-router-dom";
 import Navbar from "./Navbar";
+import NavbarContainer from "./NavbarContainer";
 import ContactUs from "./ContactUs";
 
 function AdvantagesPage() {
+  const [navbarDisplay, setNavbarDisplay] = useState(window.innerWidth > 481);
+
+  useEffect(() => {
+    const checkScreen = () => {
+      if (window.innerWidth <= 481 && navbarDisplay) {
+        setNavbarDisplay(false);
+      } else if (window.innerWidth > 481 && !navbarDisplay) {
+        setNavbarDisplay(true);
+      }
+    };
+
+    window.addEventListener("resize", checkScreen);
+
+    // Check screen size on initial render
+    checkScreen();
+
+    // Clean up the event listener on component unmount
+    return () => {
+      window.removeEventListener("resize", checkScreen);
+    };
+  }, [navbarDisplay]);
+
   const { id } = useParams();
 
   // Define pages as an object for easier key-based access
@@ -151,13 +174,20 @@ function AdvantagesPage() {
 
   return (
     <div className="advantages-page">
-      <Navbar />
-      <h2>{currentpage.maintitle}</h2>
-      <div className="advantage-paragraph-container">
-        {currentpage.content.map((cont, index) => (
-          <AdvantageParagraph key={index} title={cont.title} text={cont.text} />
-        ))}
+      {navbarDisplay ? <Navbar /> : <NavbarContainer />}
+      <div className="advantages-page-content">
+        <h2>{currentpage.maintitle}</h2>
+        <div className="advantage-paragraph-container">
+          {currentpage.content.map((cont, index) => (
+            <AdvantageParagraph
+              key={index}
+              title={cont.title}
+              text={cont.text}
+            />
+          ))}
+        </div>
       </div>
+
       <ContactUs />
     </div>
   );

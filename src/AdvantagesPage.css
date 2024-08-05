@@ -4,11 +4,20 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    gap:30px 0px;
+    /* gap:30px 0px; */
     background-color: #f4f4f4;
     min-height: 100vh;
     height: fit-content;
     width: 100vw;
+}
+
+.advantages-page-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap:30px 0px;
+    
 }
 
 .advantages-page h2{
@@ -28,4 +37,15 @@
     .advantages-page{
         min-height: 100dvh;
     }
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+    .advantages-page{
+        min-height: 100dvh;
+    }
+
+    .advantages-page-content{
+        margin-top: 60px; /* Add margin-top to move content down */
+    }
+
 }

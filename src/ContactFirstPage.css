@@ -25,6 +25,23 @@
     background-color: #f4f4f4;
 }
 
+@media (min-width: 481px) and (max-width: 768px) {
+    .contact-first-page{
+        min-height: 100dvh;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+    .contact-first-page{
+        min-height: 100dvh;
+    }
+
+    .contact-first-page-content{
+        margin-top: 60px; /* Add margin-top to move content down */
+        padding: 30px;
+    }
+}
+
 /* .contact-img{
     width: 100%;
     height: 500px;

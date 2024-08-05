@@ -1,11 +1,34 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./AboutFirstPage.css";
 import Navbar from "./Navbar";
+import NavbarContainer from "./NavbarContainer";
 
 function AboutFirstPage() {
+  const [navbarDisplay, setNavbarDisplay] = useState(window.innerWidth > 481);
+
+  useEffect(() => {
+    const checkScreen = () => {
+      if (window.innerWidth <= 481 && navbarDisplay) {
+        setNavbarDisplay(false);
+      } else if (window.innerWidth > 481 && !navbarDisplay) {
+        setNavbarDisplay(true);
+      }
+    };
+
+    window.addEventListener("resize", checkScreen);
+
+    // Check screen size on initial render
+    checkScreen();
+
+    // Clean up the event listener on component unmount
+    return () => {
+      window.removeEventListener("resize", checkScreen);
+    };
+  }, [navbarDisplay]);
+
   return (
     <div className="about-first-page">
-      <Navbar />
+      {navbarDisplay ? <Navbar /> : <NavbarContainer />}
       <div className="about-first-page-text">
         <h2>אודות התוכנה</h2>
         <p>
