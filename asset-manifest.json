@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/static/css/main.95d60c9e.css",
+    "main.js": "/static/js/main.ef11d41e.js",
+    "static/js/453.09ef6c89.chunk.js": "/static/js/453.09ef6c89.chunk.js",
+    "static/media/MainFirstPage.png": "/static/media/MainFirstPage.aefd0e4eac31f9e92fdc.png",
+    "static/media/AboutFirstPage.jpeg": "/static/media/AboutFirstPage.4b7e603a5e176137c6f9.jpeg",
+    "static/media/Aharoni CLM Book.ttf": "/static/media/Aharoni CLM Book.6f435df81c2784b34abf.ttf",
+    "static/media/AharoniCLM-Bold.pfb.ttf": "/static/media/AharoniCLM-Bold.pfb.e8fe339c6678bb593643.ttf",
+    "static/media/logo.svg": "/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/index.html",
+    "main.95d60c9e.css.map": "/static/css/main.95d60c9e.css.map",
+    "main.ef11d41e.js.map": "/static/js/main.ef11d41e.js.map",
+    "453.09ef6c89.chunk.js.map": "/static/js/453.09ef6c89.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.95d60c9e.css",
+    "static/js/main.ef11d41e.js"
+  ]
+}
