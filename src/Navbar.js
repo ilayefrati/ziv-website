@@ -20,8 +20,8 @@ function Navbar() {
         <Link to="/contact" className="nav-link">צור קשר</Link>
       </li>
       <li>
-        <Link to="/" className="nav-link-img">
-          <img src="/media/ZivLogo.png" />
+        <Link to="/" className="nav-link-img" aria-label="Go to homepage">
+          <img src="/media/ZivLogo.png" alt="ziv-logo"/>
         </Link>
       </li>
     </nav>

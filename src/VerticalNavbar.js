@@ -39,8 +39,8 @@ function VerticalNavbar(props) {
         </Link>
       </li>
       <li className="img-li">
-        <Link to="/" className="vertical-nav-link-img">
-          <img src="/media/ZivLogo.png" />
+        <Link to="/" className="vertical-nav-link-img" aria-label="Go to homepage">
+          <img src="/media/ZivLogo.png" alt="ziv-logo"/>
         </Link>
       </li>
     </nav>

@@ -56,3 +56,15 @@
 .credit p{
     color: white;
 }
+
+@media (min-width: 481px) and (max-width: 768px) {
+    .credit a{
+        font-size: 2.5rem;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+    .credit a{
+        font-size: 3rem;
+    }
+}
