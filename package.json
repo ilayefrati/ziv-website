@@ -2,6 +2,7 @@
   "name": "ziv-website",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://ilayefrati.github.io/ziv-website/",
   "dependencies": {
     "@emotion/react": "^11.13.0",
     "@emotion/styled": "^11.13.0",
@@ -24,8 +25,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
-    "homepage": "https://ilayefrati.github.io/ziv-website/"
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
