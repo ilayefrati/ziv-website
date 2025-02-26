@@ -35,7 +35,7 @@
     font-weight: bold;
   }
   
-  #vertical_navbar li:hover {
+  #vertical_navbar li:not(.img-li):hover {
     background: #272c30;
     border-right: 3px solid #d8a64e;
   }

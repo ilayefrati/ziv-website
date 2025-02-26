@@ -94,10 +94,14 @@ select{
 
 input{
   direction: rtl;
+  font-size: 1.5rem;
+  font-family: 'Aharoni CLM', sans-serif;
 }
 
 textarea{
   direction: rtl;
+  font-size: 1.5rem;
+  font-family: 'Aharoni CLM', sans-serif;
 }
 
 @media (min-width: 320px) and (max-width: 480px) {
@@ -126,8 +130,24 @@ textarea{
       font-size: 2.5rem;
   }
 
+  label{
+    font-size: 2.5rem;
+  }
+
   a{
       font-size: 2.5rem;
+  }
+
+  input{
+    font-size: 2.5rem;
+  }
+  
+  textarea{
+    font-size: 2.5rem;
+  }
+
+  select{
+    font-size: 2.5rem;
   }
 }
 
@@ -148,6 +168,22 @@ textarea{
       font-size: 2rem;
   }
 
+  label{
+    font-size: 2rem;
+  }
+
+  input{
+    font-size: 2rem;
+  }
+  
+  textarea{
+    font-size: 2rem;
+  }
+
+  select{
+    font-size: 2rem;
+  }
+
 }
 
 @media (min-width: 769px) and (max-width: 1024px) {
@@ -161,5 +197,20 @@ textarea{
 
   p{
       font-size: 2rem;
+  }
+
+  label{
+    font-size: 2rem;
+  }
+
+  input{
+    font-size: 2rem;
+  }
+  
+  textarea{
+    font-size: 2rem;
+  }
+  select{
+    font-size: 2rem;
   }
 }

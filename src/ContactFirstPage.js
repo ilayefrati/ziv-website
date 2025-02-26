@@ -18,24 +18,31 @@ function ContactFirstPage() {
     };
 
     window.addEventListener("resize", checkScreen);
-
-    // Check screen size on initial render
     checkScreen();
-
-    // Clean up the event listener on component unmount
-    return () => {
-      window.removeEventListener("resize", checkScreen);
-    };
+    return () => window.removeEventListener("resize", checkScreen);
   }, [navbarDisplay]);
 
   return (
     <div className="contact-first-page">
       {navbarDisplay ? <Navbar /> : <NavbarContainer />}
-      <div className="contact-first-page-content">
-        <h2>צור קשר</h2>
+      
+      <div className="contact-hero">
+        <div className="shape-1"></div>
+        <div className="shape-2"></div>
+        <div className="hero-content">
+          <h2>צור קשר</h2>
+          <h3 style={{color: "white"}}>אנחנו כאן כדי לעזור לך לנהל את צי הרכב שלך בצורה חלקה, יעילה וחסכונית. השאר את פרטיך וניצור איתך קשר עם הפתרונות המותאמים ביותר לצרכים שלך.</h3>
+        </div>
+      </div>
+
+      <div className="form-container">
+        <div className="form-header">
+          <h3>השאירו פרטים</h3>
+          <p>נחזור אליכם בהקדם עם כל המידע הנדרש</p>
+        </div>
         <ContactForm />
       </div>
-      {/* <img src="/media/ContactImg.jpeg" className="contact-img"/> */}
+
       <ContactUs />
     </div>
   );

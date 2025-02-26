@@ -1,8 +1,44 @@
-.advantage-paragraph{
+.advantage-paragraph {
     display: flex;
     flex-direction: column;
-    /* gap:10px 0px; */
+    gap: 15px;
+    width: 100%;
+}
+
+.advantage-paragraph h3 {
+    color: #2c3e50;
+    font-weight: 600;
     text-align: right;
-    /* justify-content: flex-start; */
-    align-items: flex-end;
+    margin: 0;
+}
+
+.advantage-paragraph h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(90deg, #e9c381, #d8a64e);
+    border-radius: 2px;
+}
+
+.advantage-paragraph p {
+    color: #505c6e;
+    line-height: 1.8;
+    text-align: right;
+    margin: 0;
+    position: relative;
+    padding-right: 20px;
+}
+
+.advantage-paragraph p::before {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0.8em;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #d8a64e;
 }

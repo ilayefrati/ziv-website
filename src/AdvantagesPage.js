@@ -176,18 +176,22 @@ function AdvantagesPage() {
     <div className="advantages-page">
       {navbarDisplay ? <Navbar /> : <NavbarContainer />}
       <div className="advantages-page-content">
-        <h2>{currentpage.maintitle}</h2>
+        <div className="page-header">
+          <h2>{currentpage.maintitle}</h2>
+          <div className="header-underline"></div>
+        </div>
         <div className="advantage-paragraph-container">
           {currentpage.content.map((cont, index) => (
-            <AdvantageParagraph
-              key={index}
-              title={cont.title}
-              text={cont.text}
-            />
+            <div className="advantage-card" key={index}>
+              <div className="card-number">{(index + 1).toString().padStart(2, '0')}</div>
+              <AdvantageParagraph
+                title={cont.title}
+                text={cont.text}
+              />
+            </div>
           ))}
         </div>
       </div>
-
       <ContactUs />
     </div>
   );

@@ -1,44 +1,276 @@
-.contact-first-page{
+.contact-first-page {
     min-height: 100vh;
-    height: fit-content;
-    width: 100vw;
-    /* padding: 0px 60px; */
+    width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
     align-items: center;
-    gap: 30px 0px;
-    padding: 0 60px;
-    background-color: #f4f4f4;
+    background: #fff;
+    position: relative;
+    padding: 0px 60px;
+    overflow-x: hidden;
+}
+
+.contact-hero {
+    width: 100vw;
+    margin-left: calc(-50vw + 50% + 30px);
+    margin-right: calc(-50vw + 50% + 30px);
+    background: linear-gradient(135deg, #d8a64e 0%, #c69544 100%);
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    margin-top: -100px;
+    padding-top: 120px;
+    padding-bottom: 60px;
+}
+
+.contact-hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        radial-gradient(circle at 20% 50%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 80% 50%, rgba(255, 255, 255, 0.1) 0%, transparent 50%);
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+    position: relative;
+    z-index: 1;
+    text-align: center;
+}
+
+.hero-content h2 {
+    /* font-size: 3.5rem; */
+    font-weight: 800;
+    margin-bottom: 20px;
+    color: white;
+    position: relative;
+    display: inline-block;
+}
+
+.hero-content h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 4px;
+    background: white;
+    border-radius: 2px;
+}
+
+.hero-content p {
+    /* font-size: 1.2rem; */
+    color: rgba(255, 255, 255, 0.9);
+    line-height: 1.6;
+    max-width: 600px;
+    margin: 30px auto 0;
+}
+
+.form-container {
+    width: 90%;
+    max-width: 800px;
+    margin: -60px auto 60px;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(216, 166, 78, 0.1);
+    padding: 40px 20px;
+    position: relative;
+    z-index: 2;
+}
+
+.form-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.form-header h3 {
+    /* font-size: 2rem; */
+    color: #14284e;
+    margin-bottom: 10px;
+}
+
+.form-header p {
+    color: #666;
+    /* font-size: 1.1rem; */
+}
+
+/* Decorative elements */
+.shape-1, .shape-2 {
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    opacity: 0.05;
+    background: white;
+}
+
+.shape-1 {
+    top: -200px;
+    left: -200px;
+}
+
+.shape-2 {
+    bottom: -200px;
+    right: -200px;
+}
+
+@media (max-width: 768px) {
+    .contact-hero {
+        padding: 100px 0 60px;
+    }
+
+    .hero-content h2 {
+        /* font-size: 2.5rem; */
+    }
+
+    .form-container {
+        width: 95%;
+        padding: 30px 20px;
+        margin-top: -40px;
+    }
+
+    .form-header h3 {
+        /* font-size: 1.8rem; */
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-hero {
+        padding: 80px 0 60px;
+        width: 100vw;
+        margin-left: calc(-50vw + 50% + 15px);
+        margin-right: calc(-50vw + 50% + 15px);
+        margin-top: -80px;
+    }
+
+    .hero-content h2 {
+        /* font-size: 2rem; */
+    }
+
+    .hero-content p {
+        /* font-size: 1.1rem; */
+    }
+
+    .contact-first-page {
+        padding: 0px 30px;
+    }
+    
+    .contact-first-page-content {
+        padding: 0;
+    }
+    
+    .form-container {
+        width: 100%;
+        padding: 30px 15px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+/* Modern dynamic background */
+.contact-first-page::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    background: 
+        linear-gradient(120deg, rgba(216, 166, 78, 0.08) 0%, transparent 50%),
+        linear-gradient(-120deg, rgba(216, 166, 78, 0.08) 0%, transparent 50%),
+        radial-gradient(circle at 70% 20%, rgba(216, 166, 78, 0.05) 0%, transparent 40%);
+    z-index: 0;
 }
 
 .contact-first-page-content{
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    gap:70px 0px;
     align-items: center;
-    padding: 70px;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    width: fit-content;
-    height: fit-content;
-    background-color: #f4f4f4;
+    margin: 40px auto;
+    padding: 0;
+    max-width: 1200px;
+    width: 90%;
+    position: relative;
+    z-index: 1;
 }
 
-@media (min-width: 481px) and (max-width: 768px) {
-    .contact-first-page{
-        min-height: 100dvh;
+.contact-first-page-content h2 {
+    /* font-size: 3.5rem; */
+    color: #1a1a1a;
+    margin-bottom: 20px;
+    position: relative;
+    text-align: center;
+    font-weight: 800;
+}
+
+.contact-first-page-content h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 4px;
+    background: #d8a64e;
+    border-radius: 2px;
+}
+
+/* Decorative elements */
+.contact-first-page-content h2::before {
+    content: '';
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 140px;
+    height: 140px;
+    background: radial-gradient(circle, rgba(216, 166, 78, 0.1) 0%, transparent 70%);
+    border-radius: 50%;
+    z-index: -1;
+}
+
+/* Adding a subtitle */
+.contact-first-page-content p {
+    /* font-size: 1.2rem; */
+    color: #666;
+    text-align: center;
+    max-width: 600px;
+    margin-bottom: 50px;
+    line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+    .contact-first-page-content {
+        margin: 20px auto;
+        width: 95%;
+    }
+
+    .contact-first-page-content h2 {
+        /* font-size: 2.8rem; */
+    }
+
+    .contact-first-page-content p {
+        /* font-size: 1.1rem; */
+        padding: 0 20px;
     }
 }
 
-@media (min-width: 320px) and (max-width: 480px) {
-    .contact-first-page{
-        min-height: 100dvh;
+@media (max-width: 480px) {
+    .contact-first-page-content {
+        margin: 10px auto;
     }
 
-    .contact-first-page-content{
-        margin-top: 60px; /* Add margin-top to move content down */
-        padding: 30px;
+    .contact-first-page-content h2 {
+        /* font-size: 2.2rem; */
     }
 }
 
@@ -49,3 +281,8 @@
     top: 0;
     left: 0;
 } */
+
+/* Fix navbar position */
+#navbar {
+    /* Keep original styles from Navbar.css */
+}

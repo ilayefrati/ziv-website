@@ -1,3 +1,4 @@
+import React, { useState, useEffect } from "react";
 import logo from "./logo.svg";
 import "./App.css";
 import { BrowserRouter, Routes, Route, HashRouter } from "react-router-dom";
@@ -6,8 +7,30 @@ import About from "./About";
 import AdvantagesPage from "./AdvantagesPage";
 import ScrollToTop from "./ScrollToTop";
 import Contact from "./Contact";
+import Loader from "./Loader";
 
 function App() {
+  const [loading, setLoading] = useState(true);
+  const [contentReady, setContentReady] = useState(false);
+
+  useEffect(() => {
+    // First, load the content
+    setTimeout(() => {
+      setContentReady(true);
+    }, 2000);
+
+    // Then, after content is ready, show it for additional 4 seconds
+    if (contentReady) {
+      setTimeout(() => {
+        setLoading(false);
+      }, 4000);
+    }
+  }, [contentReady]);
+
+  if (loading) {
+    return <Loader />;
+  }
+
   return (
     <HashRouter>
       <ScrollToTop />

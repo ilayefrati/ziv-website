@@ -1,49 +1,108 @@
 .advantage-container {
-    width: 400px;
-    height: 100%;
+    width: 350px;
+    height: 350px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
-    gap: 10px 0px;
-    padding: 15px 30px;
+    gap: 20px;
+    padding: 35px 30px;
     text-align: center;
-    background-color: #dfdcdc;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), /* Subtle shadow */
-                0 6px 20px rgba(0, 0, 0, 0.1); /* Larger, more diffuse shadow */
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
     cursor: pointer;
-    transition: color 0.3s ease, background-color 0.3s ease;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.advantage-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, #d8a64e, #e9c381);
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s ease;
 }
 
 .advantage-container i {
     color: #d8a64e;
+    background: rgba(216, 166, 78, 0.1);
+    width: 90px;
+    height: 90px;
+    min-width: 90px;
+    min-height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin: 0;
+    transition: all 0.3s ease;
+    font-size: 2.2rem;
 }
 
-.advantage-container:hover {
-    background-color: #d8a64e;
+.advantage-container h3 {
+    color: #333;
+    margin: 0;
+    font-weight: 600;
+    font-size: 2rem;
 }
 
-.advantage-container:hover i {
-    color: white;
-}
-
-.advantage-container:hover p {
-    color: white;
+.advantage-container p {
+    color: #666;
+    line-height: 1.6;
+    margin: 0;
+    /* font-size: 1.5rem; */
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    max-height: 90px;
 }
 
 .advantage-container h4 {
+    color: #d8a64e;
+    margin: 0;
+    font-weight: 500;
+    font-size: 1.3rem;
+    transition: all 0.3s ease;
     position: relative;
-    /* overflow: hidden; */
-    /* you dont need overflow: hidden because this isnt a button and you dont change its padding */
     display: inline-block;
+}
+
+.advantage-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(216, 166, 78, 0.15);
+    background-color: white;
+}
+
+.advantage-container:hover::before {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.advantage-container:hover i {
+    background: #d8a64e;
+    color: white;
+    transform: scale(1.1);
+}
+
+.advantage-container:hover h4 {
+    color: #c29339;
+    transform: translateX(-8px);
 }
 
 .advantage-container h4::after {
     content: ' >';
     position: absolute;
     opacity: 0;
-    transition: opacity 0.3s ease, transform 0.3s ease;
     transform: translateX(-20px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
 .advantage-container:hover h4::after {
@@ -52,7 +111,62 @@
 }
 
 @media (min-width: 320px) and (max-width: 480px) {
-    .advantage-container{
+    .advantage-container {
         width: 300px;
+        height: 320px;
+        padding: 25px;
+        gap: 15px;
+    }
+
+    .advantage-container i {
+        width: 70px;
+        height: 70px;
+        min-width: 70px;
+        min-height: 70px;
+        font-size: 3.5rem;
+    }
+
+    .advantage-container h3 {
+        font-size: 3rem;
+    }
+
+    .advantage-container p {
+        max-height: 150px;
+    }
+
+    .advantage-container h4 {
+        font-size: 2rem;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+    .advantage-container h3 {
+        font-size: 2.5rem;
+    }
+
+    .advantage-container p {
+        font-size: 2rem;
+    }
+    .advantage-container i {
+        font-size: 3.5rem;
+    }
+    .advantage-container h4 {
+        font-size: 2rem;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .advantage-container h3 {
+        font-size: 2.5rem;
+    }
+
+    .advantage-container p {
+        font-size: 2rem;
+    }
+    .advantage-container i {
+        font-size: 3rem;
+    }
+    .advantage-container h4 {
+        font-size: 1.5rem;
     }
 }

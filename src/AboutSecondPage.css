@@ -1,22 +1,35 @@
 .about-second-page{
-    width: 100vw;
-    height: fit-content;
-    background-color: #f4f4f4;
+    width: 100%;
+    min-height: 100vh;
+    background:linear-gradient(135deg, #ffffff 0%, #f0f2f5 100%);
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    gap: 60px 0px;
-    padding: 60px;
+    gap: 80px;
+    padding: 80px 40px;
 }
 
 .advantages{
     width: 100%;
-    height: fit-content;
-    display: flex;
-    flex-direction: row-reverse;
-    flex-wrap: wrap;
-    gap: 50px;
+    max-width: 1200px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 40px;
     justify-content: center;
     align-items: stretch;
+    margin: 0 auto;
+    justify-items: center;
+}
+
+@media (max-width: 480px) {
+    .about-second-page {
+        padding: 60px 20px;
+        gap: 60px;
+    }
+    
+    .advantages {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
 }
