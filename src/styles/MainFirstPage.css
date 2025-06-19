@@ -1,0 +1,446 @@
+.main-hero-page {
+    min-height: 100vh; /* Fixed height */
+    width: 100%; 
+    max-width: 100%;
+    background: #0A0A0A;
+    color: #fff;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0 60px;
+    overflow: hidden; /* Prevent scrolling within this component */
+    box-sizing: border-box;
+    margin: 0; /* Ensure no margin causing whitespace */
+}
+
+.main-hero-section {
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: flex-start;
+    z-index: 10;
+    position: relative;
+    min-height: 100vh; /* Keep this exact height */
+    min-height: auto;
+    overflow: hidden; /* Prevent overflow */
+    margin: 0; /* No margin */
+    padding: 0; /* No padding */
+}
+
+.model-container {
+    width: 65%;
+    height: 100vh;
+    position: absolute;
+    top: -30px;
+    left: 0px;
+    z-index: 1;
+    max-width: 65%;
+    overflow: visible;
+    background-color: #0A0A0A;
+}
+
+.main-hero-content {
+    padding: 20px 60px;
+    width: 35%;
+    max-width: 550px;
+    position: relative;
+    z-index: 10;
+    margin-top: 80px;
+    /* margin-right: 60px; */
+    height: fit-content;
+}
+
+.main-hero-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    text-align: right;
+    gap:20px 0px
+}
+
+.main-hero-badge {
+    display: none;
+}
+
+.main-hero-text h1 {
+    /* font-size: 6rem; */
+    color: #fff;
+    position: relative;
+    margin-top: 0;
+    font-weight: 700;
+    letter-spacing: 2px;
+    white-space: nowrap;
+}
+
+.main-hero-text h2 {
+    /* font-size: 3rem; */
+    color: #d8a64e;
+    font-weight: 400;
+}
+
+.main-hero-text h3 {
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.7;
+    max-width: 600px;
+}
+
+.main-hero-buttons {
+    display: flex;
+    gap: 30px;
+    align-self: flex-end;
+}
+
+.main-primary-button, .main-secondary-button {
+    padding: 9px 20px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border-radius: 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.main-primary-button {
+    background: #d8a64e;
+    color: #000;
+    border: 2px solid #d8a64e;
+}
+
+.main-secondary-button {
+    background: transparent;
+    color: #fff;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.main-primary-button:hover {
+    transform: translateY(-5px);
+    background: transparent;
+    color: #d8a64e;
+}
+
+.main-secondary-button:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-5px);
+    border-color: #fff;
+}
+
+.canvas-loading {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #000;
+    z-index: 5;
+    color: #fff;
+}
+
+.canvas-loading.hidden {
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.loader-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.spinner {
+    width: 50px;
+    height: 50px;
+    border: 3px solid rgba(255, 255, 255, 0.1);
+    border-top: 3px solid #d8a64e;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Scroll indicator styling */
+.main-scroll-indicator {
+    bottom: 20px; /* Adjust position to ensure visibility */
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 15;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: 1;
+}
+
+.main-arrow {
+    width: 30px;
+    height: 30px;
+    position: relative;
+    padding: 7px;
+    box-sizing: border-box;
+    animation: bounce 2s infinite;
+}
+
+.main-arrow span {
+    display: block;
+    width: 12px;
+    height: 12px;
+    border-right: 2px solid white;
+    border-bottom: 2px solid white;
+    transform: rotate(45deg);
+    margin: -2px 0;
+}
+
+.main-arrow span:nth-child(2) {
+    animation: arrowFade 2s infinite;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}
+
+@keyframes arrowFade {
+    0%, 100% {
+        opacity: 0.3;
+    }
+    50% {
+        opacity: 1;
+    }
+}
+
+.slide-in-right {
+    opacity: 0;
+    transform: translateX(100px);
+    animation: slideInRight 1s ease forwards;
+}
+
+.delay-1 {
+    animation-delay: 0.3s;
+}
+
+.delay-2 {
+    animation-delay: 0.6s;
+}
+
+.delay-3 {
+    animation-delay: 0.9s;
+}
+
+.delay-4 {
+    animation-delay: 1.2s;
+}
+
+@keyframes slideInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translate(-50%, 30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(-50%, 0);
+    }
+}
+
+/* Adjust camera field of view */
+canvas {
+    width: 100% !important;
+    height: 100% !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1400px) {
+    .main-hero-content {
+        padding: 20px 60px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .main-hero-page {
+        padding: 0 60px; /* Restore the padding */
+    }
+    
+    .main-hero-section {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        height: calc(100vh - 80px);
+        margin-top: 80px;
+    }
+    
+    .model-container {
+        width: 100vw; /* Full viewport width */
+        height: 100%; /* Full height */
+        position: absolute;
+        top: 60px; /* Move model down a bit */
+        left: 50%; /* Center relative to viewport */
+        transform: translateX(-50%); /* Center the container */
+        margin: 0;
+        max-width: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: transparent;
+    }
+    
+    /* Ensure canvas fills the container */
+    .model-container canvas {
+        width: 100% !important;
+        height: 100% !important;
+    }
+    
+    .main-hero-content {
+        width: 90%;
+        max-width: 600px;
+        margin: 0;
+        padding: 30px;
+        z-index: 20;
+        position: absolute;
+        top: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: rgba(10, 10, 10, 0.95);
+        border-radius: 8px;
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    }
+    .main-hero-buttons {
+        align-self: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .main-hero-page {
+        padding: 0 60px;
+    }
+    
+    .model-container {
+        left: 50%;
+        transform: translateX(-50%);
+        margin-left: 0;
+        width: 100vw;
+    }
+    
+    .main-hero-content {
+        padding: 20px;
+        width: calc(100% - 40px);
+        top: 10px;
+        background: none;
+        border: none;
+        box-shadow: none;
+        border-radius: 0;
+    }
+    
+    /* Hide the text paragraph to emphasize the 3D model */
+    .main-hero-text h3 {
+        display: none;
+    }
+    
+    .main-primary-button, .main-secondary-button {
+        padding: 10px 20px;
+        /* min-width: 160px; */
+    }
+
+    .main-hero-text {
+        text-align: center;
+        align-items: center;
+        gap: 30px 0px;
+    }
+}
+
+@media (max-width: 576px) {
+    .main-hero-content {
+        padding: 30px 20px;
+    }
+    
+    .main-hero-buttons {
+        /* flex-direction: column; */
+        gap: 15px;
+        align-self: center;
+    }
+    
+    /* .main-primary-button, .main-secondary-button {
+        width: 100%;
+    } */
+}
+
+@media (max-width: 481px) {
+    .main-hero-page {
+        padding: 0 20px;
+    }
+    
+    .main-hero-page .navbar,
+    .main-hero-page .navbar-container,
+    .main-hero-page .navbar-mobile-container,
+    .main-hero-page .vertical-navbar {
+        padding: 0 20px;
+        padding-right: 20px;
+    }
+    
+    .model-container {
+        left: 50%;
+        transform: translateX(-50%);
+        margin-left: 0;
+        margin-right: 0;
+        width: 100vw;
+    }
+}
+
+/* Adjust shadow position to match new model height */
+.contact-shadows {
+    position: absolute !important;
+    top: -20px !important;
+}
+
+/* Ensure navbar has proper positioning */
+.main-hero-page .navbar,
+.main-hero-page .navbar-container {
+    width: 100%;
+    left: 0;
+    right: 0;
+    padding: 0 60px;
+    box-sizing: border-box;
+    position: relative;
+}
+
+/* Ensure proper positioning of mobile navbar */
+.main-hero-page .navbar-mobile-container,
+.main-hero-page .vertical-navbar {
+    right: 0;
+    padding-right: 60px;
+    box-sizing: border-box;
+}
+
