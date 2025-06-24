@@ -104,35 +104,33 @@ function MainSecondPage() {
             </div>
           </div>
           <div className="info-points" ref={infoPointsRef}>
-            <div className="info-points">
-              <div className="info-point">
-                <i className="fa-solid fa-check-circle"></i>
-                <p>מערכת מוכחת עם למעלה מ-18 שנות ניסיון בשוק</p>
-              </div>
-              <div className="info-point">
-                <i className="fa-solid fa-check-circle"></i>
-                <p>חיסכון משמעותי בעלויות תפעול צי הרכב</p>
-              </div>
-              <div className="info-point">
-                <i className="fa-solid fa-check-circle"></i>
-                <p>ממשק ידידותי למשתמש וקל לתפעול</p>
-              </div>
-              <div className="info-point">
-                <i className="fa-solid fa-check-circle"></i>
-                <p>מערכת התראות חכמה למניעת תקלות</p>
-              </div>
-              <div className="info-point">
-                <i className="fa-solid fa-check-circle"></i>
-                <p>תמיכה טכנית מקצועית וזמינה</p>
-              </div>
-              <div className="info-point">
-                <i className="fa-solid fa-check-circle"></i>
-                <p>התאמה אישית לצרכי הארגון שלך</p>
-              </div>
-              <Link to="/about" className="learn-more-btn">
-                למידע נוסף <i className="fa-solid fa-arrow-left"></i>
-              </Link>
+            <div className="info-point">
+              <i className="fa-solid fa-check-circle"></i>
+              <p>מערכת מוכחת עם למעלה מ-18 שנות ניסיון בשוק</p>
             </div>
+            <div className="info-point">
+              <i className="fa-solid fa-check-circle"></i>
+              <p>חיסכון משמעותי בעלויות תפעול צי הרכב</p>
+            </div>
+            <div className="info-point">
+              <i className="fa-solid fa-check-circle"></i>
+              <p>ממשק ידידותי למשתמש וקל לתפעול</p>
+            </div>
+            <div className="info-point">
+              <i className="fa-solid fa-check-circle"></i>
+              <p>מערכת התראות חכמה למניעת תקלות</p>
+            </div>
+            <div className="info-point">
+              <i className="fa-solid fa-check-circle"></i>
+              <p>תמיכה טכנית מקצועית וזמינה</p>
+            </div>
+            <div className="info-point">
+              <i className="fa-solid fa-check-circle"></i>
+              <p>התאמה אישית לצרכי הארגון שלך</p>
+            </div>
+            <Link to="/about" className="learn-more-btn">
+              למידע נוסף <i className="fa-solid fa-arrow-left"></i>
+            </Link>
           </div>
         </div>
       </div>
