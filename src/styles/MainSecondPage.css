@@ -119,6 +119,31 @@
   background: #f4c365;
 }
 
+/* Mobile video overlay - same styling but no play button */
+.video-overlay-mobile {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(20, 40, 78, 0.7);
+  display: none;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding-top: 30px;
+  z-index: 2;
+  border-radius: 20px;
+  pointer-events: none;
+}
+
+.overlay-text-mobile {
+  color: white;
+  font-weight: 600;
+  text-align: center;
+  margin: 0;
+}
+
 .info-points {
   width: 45%;
   display: flex;
@@ -237,10 +262,13 @@
     font-size: 3rem;
   } */
   
-  .play-button {
-    width: 80px;
-    height: 80px;
-    margin-bottom: 20px;
+  /* Hide desktop overlay and show mobile overlay on mobile */
+  .video-overlay {
+    display: none !important;
+  }
+  
+  .video-overlay-mobile {
+    display: flex;
   }
   
   .info-point {

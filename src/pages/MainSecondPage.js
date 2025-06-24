@@ -6,6 +6,7 @@ import { useIntersectionObserver } from "../hooks/useIntersectionObserver";
 function MainSecondPage() {
   const videoRef = useRef(null);
   const overlayRef = useRef(null);
+  const mobileOverlayRef = useRef(null);
   const sectionRef = useRef(null);
   const headerRef = useRef(null);
   const videoContainerRef = useRef(null);
@@ -30,6 +31,9 @@ function MainSecondPage() {
               // Playback started successfully
               if (overlayRef.current) {
                 overlayRef.current.style.display = "none";
+              }
+              if (mobileOverlayRef.current) {
+                mobileOverlayRef.current.style.display = "none";
               }
             })
             .catch((error) => {
@@ -73,6 +77,29 @@ function MainSecondPage() {
     }
   }, [isSectionVisible]);
 
+  // Add event listener to hide overlays when video starts playing
+  useEffect(() => {
+    const video = videoRef.current;
+    
+    const handleVideoStart = () => {
+      if (overlayRef.current) {
+        overlayRef.current.style.display = "none";
+      }
+      if (mobileOverlayRef.current) {
+        mobileOverlayRef.current.style.display = "none";
+      }
+    };
+
+    if (video) {
+      video.addEventListener('play', handleVideoStart);
+      
+      // Cleanup event listener
+      return () => {
+        video.removeEventListener('play', handleVideoStart);
+      };
+    }
+  }, []);
+
   return (
     <div className="main-second-page" ref={sectionRef}>
       <div className="second-page-content">
@@ -87,6 +114,7 @@ function MainSecondPage() {
                 ref={videoRef}
                 controls
                 preload="metadata"
+                playsInline
               >
                 <source src={`${process.env.PUBLIC_URL}/media/ZivVideo.mp4`} type="video/mp4" />
                 הדפדפן שלך אינו תומך בתגית וידאו.
@@ -100,6 +128,9 @@ function MainSecondPage() {
                   <i className="fa-solid fa-play"></i>
                 </div>
                 <p className="overlay-text">צפו במערכת בפעולה</p>
+              </div>
+              <div className="video-overlay-mobile" ref={mobileOverlayRef}>
+                <p className="overlay-text-mobile">צפו במערכת בפעולה</p>
               </div>
             </div>
           </div>
