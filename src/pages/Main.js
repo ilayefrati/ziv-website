@@ -3,10 +3,10 @@ import MainFirstPage from "./MainFirstPage";
 import MainSecondPage from "./MainSecondPage";
 import ContactUs from "../components/ContactUs";
 
-function Main(){
+function Main({ onPageLoaded }){
     return(
         <>
-            <MainFirstPage/>
+            <MainFirstPage onPageLoaded={onPageLoaded}/>
             <MainSecondPage/>
             <ContactUs/>
         </>

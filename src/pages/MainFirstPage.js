@@ -13,7 +13,7 @@ import {
 } from "@react-three/drei";
 
 // Model component with optimized premium animation
-function AnimatedModel({ animationStart, setModelLoaded }) {
+function AnimatedModel({ animationStart, setModelLoaded, onAnimationStart }) {
   const ref = useRef();
   const groupRef = useRef();
   const startTime = useRef(null);
@@ -113,6 +113,10 @@ function AnimatedModel({ animationStart, setModelLoaded }) {
     // Initialize start time on first frame after animation starts
     if (startTime.current === null) {
       startTime.current = state.clock.getElapsedTime();
+      // Call the animation start callback on the first frame
+      if (onAnimationStart) {
+        onAnimationStart();
+      }
     }
     
     const elapsed = state.clock.getElapsedTime() - startTime.current;
@@ -186,14 +190,6 @@ function MainFirstPage({ onPageLoaded }) {
       
       // Start animation immediately to avoid the lag
       setAnimationStart(true);
-      
-      // Notify parent component that page is loaded
-      if (onPageLoaded) {
-        // Small delay to ensure animation has started
-        setTimeout(() => {
-          onPageLoaded();
-        }, 300);
-      }
     }
     
     return () => {
@@ -201,7 +197,7 @@ function MainFirstPage({ onPageLoaded }) {
         clearTimeout(startTimeoutRef.current);
       }
     };
-  }, [modelLoaded, onPageLoaded]);
+  }, [modelLoaded]);
   
   // Handle screen size changes
   useEffect(() => {
@@ -287,7 +283,13 @@ function MainFirstPage({ onPageLoaded }) {
               {/* Auto-rotating model with loading callback */}
               <AnimatedModel 
                 animationStart={animationStart} 
-                setModelLoaded={setModelLoaded} 
+                setModelLoaded={setModelLoaded}
+                onAnimationStart={() => {
+                  // Notify parent component that page is loaded only when animation starts
+                  if (onPageLoaded) {
+                    onPageLoaded();
+                  }
+                }}
               />
               
               {/* Enhanced ground shadow for better grounding */}

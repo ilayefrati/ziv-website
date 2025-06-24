@@ -65,8 +65,8 @@ function MainTestimonials() {
       <div className="video-section">
         <h3>צפו במערכת בפעולה</h3>
         <div className="video-container">
-          <video ref={videoRef} controls poster="/media/video-poster.jpg">
-            <source src="/media/ZivVideo.mp4" type="video/mp4" />
+          <video ref={videoRef} controls>
+            <source src={`${process.env.PUBLIC_URL}/media/ZivVideo.mp4`} type="video/mp4" />
             הדפדפן שלך אינו תומך בתגית וידאו.
           </video>
           <div className="video-overlay" ref={overlayRef} onClick={handleVideoPlay}>
