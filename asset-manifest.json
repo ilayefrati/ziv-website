@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/ziv-website/static/css/main.1441e39a.css",
-    "main.js": "/ziv-website/static/js/main.3e79e674.js",
+    "main.js": "/ziv-website/static/js/main.fb6830b8.js",
     "static/js/453.46fc4858.chunk.js": "/ziv-website/static/js/453.46fc4858.chunk.js",
     "static/media/AboutFirstPage.jpeg": "/ziv-website/static/media/AboutFirstPage.4b7e603a5e176137c6f9.jpeg",
     "static/media/Aharoni CLM Book.ttf": "/ziv-website/static/media/Aharoni CLM Book.6f435df81c2784b34abf.ttf",
@@ -9,11 +9,11 @@
     "static/media/logo.svg": "/ziv-website/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/ziv-website/index.html",
     "main.1441e39a.css.map": "/ziv-website/static/css/main.1441e39a.css.map",
-    "main.3e79e674.js.map": "/ziv-website/static/js/main.3e79e674.js.map",
+    "main.fb6830b8.js.map": "/ziv-website/static/js/main.fb6830b8.js.map",
     "453.46fc4858.chunk.js.map": "/ziv-website/static/js/453.46fc4858.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.1441e39a.css",
-    "static/js/main.3e79e674.js"
+    "static/js/main.fb6830b8.js"
   ]
 }
